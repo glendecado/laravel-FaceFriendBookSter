@@ -6,8 +6,11 @@
 <div class="d-flex align-items-center justify-content-center vh-100 w-100">
     <div class="d-flex flex-wrap align-items-center justify-content-center w-100" style="min-width: 375px; max-width:900px">
         <!-- left -->
-        <img src="{{asset('/images/logo.svg')}}" alt="Image" width="300px" height="250px" />
+
+        <x-logo width="300px" height="250px" />
+
         <!-- Right -->
+        
         <div>
             <div class="container-fluid rounded shadow" style="width:375px">
                 <form action="" class="d-flex flex-column gap-3 align-items-center justify-content-center p-3">
