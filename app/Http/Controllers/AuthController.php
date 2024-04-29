@@ -16,8 +16,11 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended()->route('main');
+            return redirect()->intended('/');
         }
+
+        // Authentication failed...
+        return redirect('/login')->with('error', 'Invalid email or password');
     }
 
     //logout
