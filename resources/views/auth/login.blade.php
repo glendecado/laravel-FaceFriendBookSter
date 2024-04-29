@@ -4,7 +4,7 @@
 
 @section('content')
 <div class='d-flex align-items-center justify-content-center vh-100 w-100'>
-    <div class='d-flex flex-wrap align-items-center justify-content-center w-100' style='min-width: 375px; max-width:900px'>
+    <div class='d-flex flex-wrap align-items-center justify-content-center w-100 border' style='min-width: 375px; max-width:900px'>
         <!-- left -->
 
         <x-logo width='300px' height='250px' />
