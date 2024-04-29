@@ -1,9 +1,13 @@
 <nav>
     <x-nav-list 
     :items="
-    ['Home'=>'/home', 
-    'About'=>'/about', 
-    'Services'=>'/services', 
-    'Contact' => '/contacts'
+    ['Home'=>'main', 
+    'About'=>'main', 
+    'Services'=>'main', 
+    'Contact' => 'main',
     ]" />
+    <form action="{{route('logout')}}" method='post'>
+        @csrf
+        <button type="submit">logout</button>
+    </form>
 </nav>

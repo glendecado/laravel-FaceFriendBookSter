@@ -18,7 +18,17 @@ class AuthController extends Controller
             // Authentication passed...
             return redirect()->intended()->route('main');
         }
+    }
 
-       
+    //logout
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }
