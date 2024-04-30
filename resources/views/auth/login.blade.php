@@ -4,13 +4,14 @@
 
 @section('content')
 <div class='d-flex align-items-center justify-content-center vh-100 w-100'>
+
     <div class='d-flex flex-wrap align-items-center justify-content-center w-100' style='min-width: 375px; max-width:900px'>
         <!-- left -->
 
         <x-logo width='300px' height='250px' />
 
         <!-- Right -->
-        
+
         <div>
             <div class='container-fluid rounded shadow' style='width:375px'>
                 <form method='post' action='{{route("login")}}' class='d-flex flex-column gap-3 align-items-center justify-content-center p-3'>
@@ -27,14 +28,16 @@
                         </div>
                     </div>
                     <button type='submit' class='btn btn-primary w-50'>Login</button>
+                    <!-- modal -->
 
-                    <a href='' class='border w-75 text-center text-decoration-none p-3 bg-success text-warning'>Create New Account</a>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create New Account</button>
                 </form>
             </div>
             <p class='text-center mt-3'>For funn only guys</p>
         </div>
-
-
     </div>
+
 </div>
+
+@include('auth.register')
 @endsection
