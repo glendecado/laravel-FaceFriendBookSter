@@ -14,11 +14,10 @@
 
         <div>
             <x-error class="alert alert-danger " />
-            <div class='container-fluid rounded shadow' style='width:375px'>
-
+            <div class='container-fluid rounded shadow d-flex flex-column ' style='width:375px'>
                 <form method='post' action='{{route("login")}}' class='d-flex flex-column gap-3 align-items-center justify-content-center p-3'>
                     @csrf
-
+                    @method('post')
                     <h1>Sign In</h1>
                     <div class='w-100'>
                         <div class='form-floating mb-3'>
@@ -32,9 +31,9 @@
                     </div>
                     <button type='submit' class='btn btn-primary w-50'>Login</button>
                     <!-- modal -->
-
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create New Account</button>
                 </form>
+                <div class="mb-3 text-center"> @include('auth.register')</div>
+
             </div>
             <p class='text-center mt-3'>For funn only guys</p>
         </div>
@@ -42,5 +41,5 @@
 
 </div>
 
-@include('auth.register')
+
 @endsection

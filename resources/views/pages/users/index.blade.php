@@ -3,7 +3,7 @@
 @section('title','')
 
 @section('content')
-{{ Auth::user()->name }}
+{{ Auth::user()->uName }}
 
 
 <form action="/profile">
