@@ -20,7 +20,7 @@ class AuthController extends Controller
         }
 
         // Authentication failed...
-        return redirect('/login')->with('error', 'Invalid email or password');
+        return redirect()->route('main')->with('error', 'Invalid email or password');
     }
 
     //logout
