@@ -10,8 +10,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'main'])->name('main');
 
-Route::post('/login',[AuthController::class, 'login'])->name('login');
-Route::post('/logout',[AuthController::class, 'logout'])->name('logout');
+Route::post('/login/submit',[AuthController::class, 'store'])->name('login');
+
+Route::post('/login',[AuthController::class, 'store'])->name('login:view');
+
+Route::post('/logout',[AuthController::class, 'destroy'])->name('logout');
 
 Route::get('/profile',[UserController::class, 'image']);
 
